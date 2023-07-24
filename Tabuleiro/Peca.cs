@@ -11,11 +11,11 @@
         {
         }
 
-        public Peca(Posicao posicao, Cor cor, Tabuleiro tab)
+        public Peca(Tabuleiro tab , Cor cor)
         {
-            Posicao = posicao;
-            Cor = cor;
+            Posicao = null;
             Tab = tab;
+            Cor = cor;
             QteMovimentos = 0;
         }
     }
