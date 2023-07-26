@@ -37,7 +37,7 @@ namespace tabuleiro
 
         public void ColocarPeca(Peca p, Posicao pos)
         {
-            if (ExistePeca(pos))
+            if (ExistePeca(pos)) // ExistePeca(pos) é a mesma coisa que peca(pos) != null; caso o ValidarPosicao seja válido
             {
                 throw new TabuleiroException("Já existe uma peça nessa posição");
             }
