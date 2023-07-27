@@ -46,6 +46,18 @@ namespace tabuleiro
             p.Posicao = pos;
         }
 
+        public Peca RetirarPeca(Posicao pos)// ------------------------- testar sem variável aux
+        {
+            if (peca(pos) == null)
+            {
+                return null;
+            }
+            Peca aux = peca(pos);
+            aux.Posicao = null;
+            _pecas[pos.Linha, pos.Coluna] = null;
+            return aux;  
+        }
+
         public bool PosicaoValida(Posicao pos)
         {
             if(pos.Linha<0 || pos.Linha>=Linhas || pos.Coluna<0 || pos.Coluna >= Colunas)
